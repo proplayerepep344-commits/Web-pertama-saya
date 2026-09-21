@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Website Livi</title>
+</head>
+
+<body style="
+    background: linear-gradient(135deg, #00BFFF, #4B0082);
+    color: white;
+    text-align: center;
+    font-family: Arial;
+    padding-top: 100px;
+">
+
+    <h1>🌟 Website Livi 🌟</h1>
+
+    <p>Selamat datang di website pertamaku!</p>
+
+    <button onclick="ubahPesan()" style="
+    background-color: #FF1493;
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 12px;
+    font-size: 18px;
+">
+    Klik Aku
+</button>
+
+<p id="pesan"></p>
+
+<script>
+function ubahPesan() {
+    document.getElementById("pesan").innerHTML =
+        "Pinjam Dulu seratus";
+}
+</script>
+
+    <button id="modeButton" onclick="gantiMode()" style="
+    background-color: #111827;
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+">
+    🌙 Dark Mode
+</button>
+
+<script>
+function gantiMode() {
+    let tombol = document.getElementById("modeButton");
+
+    if (document.body.style.background === "rgb(17, 24, 39)") {
+        document.body.style.background =
+            "linear-gradient(135deg, #00BFFF, #4B0082)";
+        tombol.innerHTML = "🌙 Dark Mode";
+    } else {
+        document.body.style.background = "#111827";
+        tombol.innerHTML = "☀️ Light Mode";
+    }
+}
+</script>
+
+</body>
+</html>
